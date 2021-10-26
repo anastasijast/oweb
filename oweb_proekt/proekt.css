@@ -1,0 +1,146 @@
+.ramka {
+    border: 5px solid rgb(173, 146, 189);
+    border-radius: 10px;
+}
+.tekst1{
+    background-color: rgb(173, 146, 189);
+    font-size: large;
+    color: white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header {
+    text-align: center;
+    background-image: url("images/pozadina1.jpg");
+    background-position: center;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sl1{
+    text-align: center;
+    border-radius: 100%;
+    margin-top: 7%;
+    width: 10%;
+}
+.info{
+    font-size: large;
+    padding-left: 2%;
+    margin-top: 5px;
+}
+ul{
+    list-style-type: square;
+}
+li{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+    background-color: grey;
+    font-size: large;
+    color: white;
+    margin-right: 3%;
+    padding-left: 2%;
+}
+li:hover{
+    background-color: rgb(252, 252, 80);
+    color: black;
+}
+nav{
+    font-size: xx-large;
+    font-weight: bold;
+    color:white;
+    border: 2px solid rgb(173, 146, 189);
+    text-align: center;
+    width: 10em;
+    background-color: rgb(173, 146, 189);
+}
+nav ul{
+    display: none;
+    list-style: none;
+}
+nav:hover ul{
+    display: block;
+}
+nav ul li{
+    border-top: 2px solid rgb(173, 146, 189);
+    background-color: rgb(252, 252, 80);
+    width: 10em;
+}
+nav ul li:hover{
+    background-color: rgb(182, 168, 190);
+}
+a{
+    text-decoration: none;
+}
+.a4{
+    border: 5px rgb(252, 252, 80);
+    border-radius: 10px;
+    margin-top: 15px;
+    background-color: rgb(252, 252, 80);
+    text-align: center;
+    padding: 15px 0;
+}
+.kolona p{
+    font-size: x-large;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+.red{
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+.kolona{
+    flex: 33.33%;
+    width: 33.33%;
+}
+.kolona img{
+    margin: 10px 0;
+    vertical-align: middle;
+    width: 50%;
+}
+.sl:hover{
+    transform: scale(1.7);
+}
+.p1{
+    background-color: grey;
+    font-size: xx-large;
+    color: white;
+    padding-left: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.a1{
+    border: 5px solid grey;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding:15px 0;
+}
+
+fieldset{
+    border: 2px solid rgb(173, 146, 189);
+    border-radius: 10px;
+    background-color: rgb(173, 146, 189);
+    margin: 0 10%;
+    margin-top: 15px;
+}
+fieldset legend{
+    background-color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    margin: 20px;
+    color: rgb(34, 33, 33);
+}
+.button{
+    margin: 20px 0;
+    background-color: grey;
+}
+.button:hover{
+    background-color: rgb(252, 252, 80);
+}
+fieldset label b{
+    color: rgb(34, 33, 33);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
