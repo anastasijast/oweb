@@ -1,6 +1,9 @@
-.ramka {
-    border: 5px solid rgb(173, 146, 189);
-    border-radius: 10px;
+.ramka{
+    margin-left: 10%;
+    margin-right: 1%;
+}
+.ram{
+    background-color: rgb(173, 146, 189);
 }
 .tekst1{
     background-color: rgb(173, 146, 189);
@@ -9,27 +12,26 @@
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-header {
-    text-align: center;
-    background-image: url("images/pozadina1.jpg");
-    background-position: center;
-    background-origin: content-box;
+body{
+    background-image: url("images/poz.jpg");
     background-repeat: no-repeat;
+    background-attachment:fixed;
     background-size: cover;
+    margin: 0;
 }
 .sl1{
-    text-align: center;
     border-radius: 100%;
     margin-top: 7%;
-    width: 10%;
+    width: 15%;
 }
 .info{
     font-size: large;
     padding-left: 2%;
     margin-top: 5px;
+    color: white;
 }
 ul{
-    list-style-type: square;
+    list-style-type: none;
 }
 li{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -74,8 +76,8 @@ a{
 .a4{
     border: 5px rgb(252, 252, 80);
     border-radius: 10px;
-    margin-top: 15px;
-    background-color: rgb(252, 252, 80);
+    margin: 1% 5%;
+    background-color: rgb(252, 252, 80,0.726);
     text-align: center;
     padding: 15px 0;
 }
@@ -105,7 +107,7 @@ a{
     transform: scale(1.7);
 }
 .p1{
-    background-color: grey;
+    background-color: rgb(173, 146, 189);
     font-size: xx-large;
     color: white;
     padding-left: 20px;
@@ -113,18 +115,18 @@ a{
     margin-bottom: 30px;
 }
 .a1{
-    border: 5px solid grey;
+    background-color: rgba(255, 255, 255, 0.726);
     border-radius: 10px;
-    margin-top: 15px;
     padding:15px 0;
+    margin: 1% 5%;
 }
 
 fieldset{
-    border: 2px solid rgb(173, 146, 189);
+    border: 2px solid rgb(173, 146, 189,0.726);
     border-radius: 10px;
-    background-color: rgb(173, 146, 189);
-    margin: 0 10%;
-    margin-top: 15px;
+    background-color: rgb(173, 146, 189,0.726);
+    margin: 1% 10%;
+
 }
 fieldset legend{
     background-color: white;
