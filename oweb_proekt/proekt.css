@@ -3,21 +3,16 @@
     margin-right: 1%;
 }
 .ram{
-    background-color: rgb(173, 146, 189);
-}
-.tekst1{
-    background-color: rgb(173, 146, 189);
-    font-size: large;
-    color: white;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(226, 226, 68);
+    text-align:right ;
 }
 body{
-    background-image: url("images/poz.jpg");
+    background-image: url("images/bg.jpg");
     background-repeat: no-repeat;
     background-attachment:fixed;
     background-size: cover;
     margin: 0;
+    padding: 0;
 }
 .sl1{
     border-radius: 100%;
@@ -30,10 +25,10 @@ body{
     margin-top: 5px;
     color: white;
 }
-ul{
+.ramka ul{
     list-style-type: none;
 }
-li{
+.ramka li{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 20px;
     background-color: grey;
@@ -42,50 +37,20 @@ li{
     margin-right: 3%;
     padding-left: 2%;
 }
-li:hover{
-    background-color: rgb(252, 252, 80);
+.ramka li:hover{
+    background-color: rgb(226, 226, 68);
     color: black;
-}
-nav{
-    font-size: xx-large;
-    font-weight: bold;
-    color:white;
-    border: 2px solid rgb(173, 146, 189);
-    text-align: center;
-    width: 10em;
-    background-color: rgb(173, 146, 189);
-}
-nav ul{
-    display: none;
-    list-style: none;
-}
-nav:hover ul{
-    display: block;
-}
-nav ul li{
-    border-top: 2px solid rgb(173, 146, 189);
-    background-color: rgb(252, 252, 80);
-    width: 10em;
-}
-nav ul li:hover{
-    background-color: rgb(182, 168, 190);
 }
 a{
     text-decoration: none;
 }
 .a4{
-    border: 5px rgb(252, 252, 80);
+    border: 5px rgba(255, 255, 255, 0.726);
     border-radius: 10px;
     margin: 1% 5%;
-    background-color: rgb(252, 252, 80,0.726);
+    background-color: rgba(255, 255, 255, 0.726);
     text-align: center;
     padding: 15px 0;
-}
-.kolona p{
-    font-size: x-large;
-    background-color: white;
-    color: black;
-    font-weight: bold;
 }
 .red{
     display: flex; 
@@ -107,12 +72,12 @@ a{
     transform: scale(1.7);
 }
 .p1{
-    background-color: rgb(173, 146, 189);
+    background-color: rgb(226, 226, 68);
     font-size: xx-large;
-    color: white;
+    color: black;
     padding-left: 20px;
-    font-weight: bold;
     margin-bottom: 30px;
+    text-align: center;
 }
 .a1{
     background-color: rgba(255, 255, 255, 0.726);
@@ -122,10 +87,11 @@ a{
 }
 
 fieldset{
-    border: 2px solid rgb(173, 146, 189,0.726);
+    border: 2px solid rgb(226, 226, 68,0.726);
     border-radius: 10px;
-    background-color: rgb(173, 146, 189,0.726);
+    background-color: rgb(226, 226, 68,0.726);
     margin: 1% 10%;
+    text-align: center;
 
 }
 fieldset legend{
@@ -140,9 +106,73 @@ fieldset legend{
     background-color: grey;
 }
 .button:hover{
-    background-color: rgb(252, 252, 80);
+    background-color: rgb(226, 226, 68);
 }
 fieldset label b{
     color: rgb(34, 33, 33);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+footer{
+    background-color: black;
+    margin: 0 0;
+    padding: 0 0 1% 0;
+    text-align: center;
+}
+footer ul{
+    list-style: none;
+}
+footer li{
+    display: inline;
+}
+footer img{
+    width: 3%;
+    margin: 0 50px;
+}
+.p2{
+    font-size: xx-large;
+    color: white;
+    font-weight: bold;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(226, 226, 68);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav a {
+    padding-right: 20px;
+    padding-bottom: 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: black;
+}
+.sidenav .x{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+}
+span{
+    color: black;
+    padding-right: 20px;
+    font-size: 25px;
+}
+#pa1, #pa2, #pa3, #pa4, #pa5, #pa6{
+    display: none;
+    background-color: white;
+    padding: 23% 0;
+    margin: 0 25%;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
