@@ -5,24 +5,25 @@
         <title>Anastasija</title>
         <link href="./proekt.css" rel="stylesheet" type="text/css">
         <script src="./proekt.js"></script>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     </head>
     <body>
-        <div class="ram">
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="x" onclick="closeNav()">&#9776;</a>
-                <a href="#home">Home</a>
-                <a href="#fav">Favourites</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#blog">Blog</a>
-                <a href="#survey">Survey</a>
-              </div>
-              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-        </div>
-        <div class="ramka">
+        <header>
+            <div class="menu">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="x" onclick="closeNav()">&#9776;</a>
+                    <a href="#home">Home</a>
+                    <a href="#fav">Favourites</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#survey">Survey</a>
+                  </div>
+                  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            </div>
+        </header>
+        <div class="pocetok">
             <a name="home">
-                <header>
-                    <img src="./images/slika1.jpg" alt="Anastasija" class="sl1">
-                </header>
+                <img src="./images/slika1.jpg" alt="Anastasija" class="mojaslika">
                 <p>
                     <ul>
                         <li>Name</li>
@@ -44,86 +45,228 @@
                 </p>
             </a>
         </div>
-        <div class="a4">
+        <div class="omileni">
             <a name="fav">
-                <p class="p1">Favourites</p>
+                 <p class="p_galerija" ><i class="fad fa-chevron-right"></i> Favourites</p>
+                 
                 <div class="red">
                     <div class="kolona">
                         <a href="https://www.youtube.com/watch?v=Q_L-0Ryhmic">
-                            <img src="./images/layla.jpg">
+                            <img src="./images/layla.jpg" class="sl_f">
                         </a>
                     </div>
                     <div class="kolona">
                         <a href="https://www.imdb.com/title/tt0944947/">
-                            <img src="./images/got.jpg">
+                            <img src="./images/got.jpg" class="sl_f">
                         </a>
                     </div>
                     <div class="kolona">
                         <a href="https://www.guillaumemusso.com/en/books/will-you-be-there-9782845632806">
-                            <img src="./images/book.jpg">
+                            <img src="./images/book.jpg" class="sl_f">
+                        </a>
+                    </div>
+                </div>
+                <div class="red">
+                    <div class="kolona">
+                        <a href="https://www.youtube.com/watch?v=NlwIDxCjL-8">
+                            <img src="./images/shape_of.png" class="sl_f">
+                        </a>
+                    </div>
+                    <div class="kolona">
+                        <a href="https://www.imdb.com/title/tt10048342/">
+                            <img src="./images/queens_gambit.jpg" class="sl_f">
+                        </a>
+                    </div>
+                    <div class="kolona">
+                        <a href="https://www.agathachristie.com/en/stories/the-mystery-of-the-blue-train">
+                            <img src="./images/mystery.jpg" class="sl_f">
                         </a>
                     </div>
                 </div>
             </a>
         </div>
-        <div class="a1">
+        <div class="galerija">
             <a name="gallery">
-                <p class="p1">Gallery</p>
+                <p class="p_galerija"><i class="fad fa-chevron-right"></i> Gallery</p>
                 <div class="red">
                     <div class="kolona">
-                        <img src="./images/p5.jpg" class="sl">
+                        <div class="ramka">
+                            <img src="./images/p5.jpg" class="sl" onclick="golema1()" id="sl_m1">
+                            <div id="div_slika1" class="sl_golema">
+                                <span class="close1" style="cursor: pointer;">&times;</span>
+                                <img class="slika" id="sl_g1">
+                            </div>
+                            <figcaption><i class="far fa-heart" id="srce1" onclick="like1()"></i> <p class="br_lajkovi" id="lajk1">0</p> <i class="fal fa-comment" id="kom1" onclick="komentar1()" style="cursor: pointer;"></i>
+                                <p onclick="pokazi_kom1()" id="skrij_kom1" style="cursor: pointer;">Show Comments</p>
+                                <div class="komentar" id="com1">
+                                    <textarea name="comment" cols="30" rows="2" id="tekst_kom1">Enter a comment</textarea>
+                                    <button class="kopce" onclick="postiraj1()">Post</button>
+                                </div>
+                                <hr>
+                                <div id="site_kom1" class="site_kom">
+                                </div>
+                            </figcaption>
+                        </div>
                     </div>
                     <div class="kolona">
-                        <img src="./images/p13.jpg" class="sl">
+                        <div class="ramka">
+                            <img src="./images/p13.jpg" class="sl" onclick="golema2()" id="sl_m2">
+                            <div id="div_slika2" class="sl_golema">
+                                <span class="close2" style="cursor: pointer;">&times;</span>
+                                <img class="slika" id="sl_g2">
+                            </div>
+                            <figcaption><i class="far fa-heart" id="srce2" onclick="like2()"></i> <p class="br_lajkovi" id="lajk2">0</p> <i class="fal fa-comment" id="kom2" onclick="komentar2()" style="cursor: pointer;"></i>
+                                <p onclick="pokazi_kom2()" id="skrij_kom2" style="cursor: pointer;">Show Comments</p>
+                                <div class="komentar" id="com2">
+                                    <textarea name="comment" cols="30" rows="2" id="tekst_kom2">Enter a comment</textarea>
+                                    <button class="kopce" onclick="postiraj2()">Post</button>
+                                </div>
+                                <hr>
+                                <div id="site_kom2" class="site_kom">
+                                </div>
+                            </figcaption>
+                        </div>
                     </div>
                     <div class="kolona">
-                        <img src="./images/p7.jpg" class="sl">
+                        <div class="ramka">
+                            <img src="./images/p7.jpg" class="sl" onclick="golema3()" id="sl_m3">
+                            <div id="div_slika3" class="sl_golema">
+                                <span class="close3" style="cursor: pointer;">&times;</span>
+                                <img class="slika" id="sl_g3">
+                            </div>
+                            <figcaption><i class="far fa-heart" id="srce3" onclick="like3()"></i> <p class="br_lajkovi" id="lajk3">0</p> <i class="fal fa-comment" id="kom3" onclick="komentar3()" style="cursor: pointer;"></i>
+                                <p onclick="pokazi_kom3()" id="skrij_kom3" style="cursor: pointer;">Show Comments</p>
+                                <div class="komentar" id="com3">
+                                    <textarea name="comment" cols="30" rows="2" id="tekst_kom3">Enter a comment</textarea>
+                                    <button class="kopce" onclick="postiraj3()">Post</button>
+                                </div>
+                                <hr>
+                                <div id="site_kom3" class="site_kom">
+                                </div>
+                            </figcaption>
+                        </div>
                     </div>  
                 </div>
                 <div class="red">
                     <div class="kolona">
-                        <img src="./images/p2.jpg" class="sl">
+                        <div class="ramka">
+                            <img src="./images/p2.jpg" class="sl" onclick="golema4()" id="sl_m4">
+                            <div id="div_slika4" class="sl_golema">
+                                <span class="close4" style="cursor: pointer;">&times;</span>
+                                <img class="slika" id="sl_g4">
+                            </div>
+                            <figcaption><i class="far fa-heart" id="srce4" onclick="like4()"></i> <p class="br_lajkovi" id="lajk4">0</p> <i class="fal fa-comment" id="kom4" onclick="komentar4()" style="cursor: pointer;"></i>
+                                <p onclick="pokazi_kom4()" id="skrij_kom4" style="cursor: pointer;">Show Comments</p>
+                                <div class="komentar" id="com4">
+                                    <textarea name="comment" cols="30" rows="2" id="tekst_kom4">Enter a comment</textarea>
+                                    <button class="kopce" onclick="postiraj4()">Post</button>
+                                </div>
+                                <hr>
+                                <div id="site_kom4" class="site_kom">
+                                </div>
+                            </figcaption>
+                        </div>
                     </div>
                     <div class="kolona">
-                        <img src="./images/p10.jpg" class="sl">
+                        <div class="ramka">
+                            <img src="./images/p10.jpg" class="sl" onclick="golema5()" id="sl_m5">
+                            <div id="div_slika5" class="sl_golema">
+                                <span class="close5" style="cursor: pointer;">&times;</span>
+                                <img class="slika" id="sl_g5">
+                            </div>
+                            <figcaption><i class="far fa-heart" id="srce5" onclick="like5()"></i> <p class="br_lajkovi" id="lajk5">0</p> <i class="fal fa-comment" id="kom5" onclick="komentar5()" style="cursor: pointer;"></i>
+                                <p onclick="pokazi_kom5()" id="skrij_kom5" style="cursor: pointer;">Show Comments</p>
+                                <div class="komentar" id="com5">
+                                    <textarea name="comment" cols="30" rows="2" id="tekst_kom5">Enter a comment</textarea>
+                                    <button class="kopce" onclick="postiraj5()">Post</button>
+                                </div>
+                                <hr>
+                                <div id="site_kom5" class="site_kom">
+                                </div>
+                            </figcaption>
+                        </div>
                     </div>
                     <div class="kolona">
-                        <img src="./images/p11.jpg" class="sl">
+                        <div class="ramka">
+                            <img src="./images/p11.jpg" class="sl" onclick="golema6()" id="sl_m6" style="cursor: pointer;">
+                            <div id="div_slika6" class="sl_golema">
+                                <span class="close6" style="cursor: pointer;">&times;</span>
+                                <img class="slika" id="sl_g6">
+                            </div>
+                            <figcaption><i class="far fa-heart" id="srce6" onclick="like6()"></i> <p class="br_lajkovi" id="lajk6">0</p> <i class="fal fa-comment" id="kom6" onclick="komentar6()" style="cursor: pointer;"></i>
+                                <p onclick="pokazi_kom6()" id="skrij_kom6" style="cursor: pointer;">Show Comments</p>
+                                <div class="komentar" id="com6">
+                                    <textarea name="comment" cols="30" rows="2" id="tekst_kom6">Enter a comment</textarea>
+                                    <button class="kopce" onclick="postiraj6()">Post</button>
+                                </div>
+                                <hr>
+                                <div id="site_kom6" class="site_kom">
+                                </div>
+                            </figcaption>
+                        </div>
+
                     </div>
                 </div>
             </a>
         </div>
-        <div class="a1">
+        <div class="galerija">
             <a name="blog">
-                <p class="p1">Blog</p>
-                <div class="red">
-                    <div class="kolona">
-                        <img src="./images/b3.jpg"id="b3" onclick="sliki1()">
-                        <p id="pa1">Apple Smoothie</p>
-                    </div>
-                    <div class="kolona">
-                        <img src="./images/b1.jpg" id="b1" onclick="sliki2()">
-                        <p id="pa2">Avocado&Ham Sandwich</p>
-                    </div>
-                    <div class="kolona">
-                        <img src="./images/b4.jpg" id="b4" onclick="sliki3()">
-                        <p id="pa3">Chia Pudding</p>
-                    </div>
-                </div>
-                <div class="red">
-                    <div class="kolona">
-                        <img src="./images/b6.jpg" id="b6" onclick="sliki4()">
-                        <p id="pa4">Egg Wrap</p>
-                    </div>
-                    <div class="kolona">
-                        <img src="./images/b5.jpg" id="b5" onclick="sliki5()">
-                        <p id="pa5">Pancakes</p>
-                    </div>
-                    <div class="kolona">
-                        <img src="./images/b2.jpg" id="b2" onclick="sliki6()">
-                        <p id="pa6">Banana Omelette</p>
-                    </div>
-                </div>
+                <p class="p_galerija"><i class="fad fa-chevron-right"></i> Blog</p>
+                <ul class="blog_s">
+                    <li><i class="fas fa-10x fa-file-upload"></i></li>
+                    <li>
+                        <div class="blog_div">
+                        <img src="./images/pancakes.jpg" class="sl2">
+                        <div class="recipe" onclick="recept1()" style="cursor: pointer;">
+                            <i class="fal fa-angle-double-right" id="strelka-desno1"></i> <p style="display: inline;" id="show_r1">Show Recipe</p>
+                            <p id="tekst_r1" style="display: none; font-size: smaller;">
+                                In a blender, pour in SILK Almond Milk, eggs, egg white, banana, maple syrup, vanilla (optional), rolled oats, baking powder and salt.
+                                Blend until smooth.
+                                Heat skillet over medium heat. 
+                                Once warmed, spray with non-stick cooking spray or place coconut oil or butter in skillet. 
+                                Pour pancake batter into skillet in round circles.
+                                Cook for 2-3 minutes on one side. Turn over and cook for another 1-2 minutes.
+                                Drizzle with real maple syrup and toppings of choice.</p>
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="blog_div">
+                            <img src="./images/zucchini.jpg" class="sl2">
+                            <div class="recipe" onclick="recept2()" style="cursor: pointer;">
+                                <i class="fal fa-angle-double-right" id="strelka-desno2"></i> <p style="display: inline;" id="show_r2">Show Recipe</p>
+                                <p id="tekst_r2" style="display: none; font-size: smaller;">
+                                    In a medium sized skillet over medium high heat add the butter until melted.
+                                    Add the garlic, oregano, rosemary and thyme. 
+                                    Add the chicken and cook for 3-4 minutes on each side or until chicken is no longer pink and 165 degrees. 
+                                    Remove chicken and set aside on plate.
+                                    Add the zucchini to the pan and salt and pepper. Saute for 2-3 minutes or until tender.
+                                    Add chicken back to the pan for a minute or so and serve.
+                                    </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="blog_div">
+                            <img src="./images/caesar.jpg" class="sl2">
+                            <div class="recipe" onclick="recept3()" style="cursor: pointer;">
+                                <i class="fal fa-angle-double-right" id="strelka-desno3"></i> <p style="display: inline;" id="show_r3">Show Recipe</p>
+                                <p id="tekst_r3" style="display: none; font-size: smaller;">
+                                    In a cast iron skillet, heat 2 tbsp of avocado oil.
+                                    Season the chicken with salt and pepper on both sides.
+                                    Cook the chicken in the skillet until completely cooked, flipping halfway. 
+                                    Remove from the heat when the internal temperature reaches 165°F.
+                                    While the chicken is cooking, mix the bread cubes in a bowl with avocado oil, garlic, salt, and pepper.
+                                    Pour the tossed bread onto the parchment paper lined baking sheet and bake for 12-15 minutes, or until golden brown. 
+                                    Toss halfway through.
+                                    Then, to make the dressing, whisk all of the ingredients together in a bowl. Taste and adjust to your seasoning needs.
+                                    Prep the salad by adding the lettuce to a big bowl and tossing with 2/3 of the dressing.
+                                </p>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
             </a>
 
         </div>
@@ -131,7 +274,7 @@
             <form method="post" action="https://www.instagram.com/">
                 <div class="forma">
                     <fieldset>
-                        <legend><b>Please answer the following questions</b></legend>
+                        <legend><b>Please fill in the following fields</b></legend>
                         <label><b>Name:</b></label><br>
                         <input type="text" name="name" size="20" maxlength="25"><br>
                         <hr>
@@ -151,24 +294,19 @@
             </form>
         </a>
         <footer>
-            <p class="p2">Contact:</p>
-            <ul>
-                <li>
+            <p class="kontakt">Contact:</p>
                     <a href="https://www.facebook.com/stefanovska.anastasija/">
-                        <img src="./images/fb.png" alt="facebook">
+                        <i class="fab fa-3x fa-facebook-square" style="color: white;"></i>
                     </a>
-                </li>
-                <li>
                     <a href="https://www.instagram.com/anastasijast_/">
-                        <img src="./images/insta.png" alt="instagram">
+                        <i class="fab fa-3x fa-instagram" style="color: white;"></i>
                     </a>
-                </li>
-                <li>
+
                     <a href="https://github.com/anastasijast">
-                        <img src="./images/github.png" alt="github">
+                        <i class="fab fa-3x fa-github-square" style="color: white;"></i>
                     </a>
-                </li>
-            </ul>
+                    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94881.7990677431!2d21.354850025749858!3d41.99906896246268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135415a58c9aa2a5%3A0xb2ed88c260872020!2sSkopje!5e0!3m2!1sen!2smk!4v1637587112821!5m2!1sen!2smk"
+                         width="700" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
         </footer>
     </body>
    
