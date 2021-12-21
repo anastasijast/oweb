@@ -5,6 +5,16 @@
         <title>Anastasija</title>
         <link href="./proekt.css" rel="stylesheet" type="text/css">
         <script src="./proekt.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#search").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $(".prebaraj").filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)    });
+                    })
+                });
+        </script>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     </head>
     <body>
@@ -20,12 +30,17 @@
                   </div>
                   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
             </div>
+            
         </header>
-        <div class="pocetok">
+        
             <a name="home">
-                <img src="./images/slika1.jpg" alt="Anastasija" class="mojaslika">
+                <div class="start">
+                        <img src="./images/slika1.jpg" alt="Anastasija" class="mojaslika">
+                        <h1 style="float: right;">Hello!</h1>
+                </div>
+                <div class="pocetok">
                 <p>
-                    <ul>
+                    <ul class="linii">
                         <li>Name</li>
                         <hr>
                         <p class="info">Anastasija Stefanovska</p>
@@ -212,13 +227,22 @@
         <div class="galerija">
             <a name="blog">
                 <p class="p_galerija"><i class="fad fa-chevron-right"></i> Blog</p>
-                <ul class="blog_s">
-                    <li><i class="fas fa-10x fa-file-upload"></i></li>
+                <ul class="blog_s" id="blog_sliki">
+                    <li>
+                       
+                          <form action="/action_page.php">
+                            <input type="file" id="myFile" name="filename" style="color: white;">
+                            <input type="submit" onclick="postiraj()">
+                          </form>
+                          <textarea name="comment" cols="100" rows="4" id="recept">Write A Recipe</textarea>
+                          <button onclick="postiraj_recept()">Post</button>
+                          
+                    </li> 
                     <li>
                         <div class="blog_div">
                         <img src="./images/pancakes.jpg" class="sl2">
                         <div class="recipe" onclick="recept1()" style="cursor: pointer;">
-                            <i class="fal fa-angle-double-right" id="strelka-desno1"></i> <p style="display: inline;" id="show_r1">Show Recipe</p>
+                            <i class="fal fa-angle-double-right" id="strelka-desno1" ></i> <p style="display: inline;" id="show_r1">Show Recipe</p>
                             <p id="tekst_r1" style="display: none; font-size: smaller;">
                                 In a blender, pour in SILK Almond Milk, eggs, egg white, banana, maple syrup, vanilla (optional), rolled oats, baking powder and salt.
                                 Blend until smooth.
@@ -271,27 +295,33 @@
 
         </div>
         <a name="survey">
-            <form method="post" action="https://www.instagram.com/">
-                <div class="forma">
-                    <fieldset>
+            <div class="forma">
+                <fieldset>
+                    <div style="text-align: center;">
                         <legend><b>Please fill in the following fields</b></legend>
-                        <label><b>Name:</b></label><br>
-                        <input type="text" name="name" size="20" maxlength="25"><br>
-                        <hr>
-                        <label><b>E-mail Address:</b></label><br>
-                        <input type="email" name="E-mail" size="35" maxlength="40" required>
-                        <hr>
-                        <label><b>Comments:</b></label><br>
-                        <textarea name="comment" rows="4" cols="50">
-                        </textarea><br>
-                        <hr>
-                        <label><b>Rate my site:</b></label><br>
-                        <input type="range" name="rate" min="0" max="10"> <br>
+                    <label><b>Name:</b></label><br>
+                    <input type="text" id="ime" name="name" size="20" maxlength="25"><br>
+                    <hr>
+                    <label><b>E-mail Address:</b></label><br>
+                    <input type="email" id="email" name="E-mail" size="35" maxlength="40" placeholder="something@example.com" required>
+                    <hr>
+                    <label><b>Comments:</b></label><br>
+                    <textarea name="comment" rows="4" cols="50" id="tekst">
+                    </textarea><br>
+                    <hr>
+                    <label><b>Rate my site:</b></label><br>
+                    <input type="range" name="rate" min="0" max="10" id="ocenka"> <br>
 
-                        <input type = "submit" value = "Submit" class="button">
-                    </fieldset>   
-                </div>
-            </form>
+                    <button class="button" onclick="pokazi_impresii()">Submit</button>
+                    </div>
+                    <div id="impresii" style="text-align: left; display: none; overflow-y: scroll; width: 100%; height: 300px;">
+                        <hr>
+                        <p id="hide" style="text-decoration: underline; cursor: pointer;" onclick="hide_blog()">Hide</p>
+                        <input type="text" id="search" placeholder="Search.." style="margin: 10px; text-align:center">
+
+                    </div>
+                </fieldset>   
+            </div>
         </a>
         <footer>
             <p class="kontakt">Contact:</p>

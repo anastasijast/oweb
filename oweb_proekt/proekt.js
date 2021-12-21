@@ -310,3 +310,34 @@ function recept3(){
         y.style.display="none";
     }
 }
+function postiraj(){
+    var srci=document.getElementById("myFile").value;
+    const Niza=srci.split("\\");
+    var source="./images/"+Niza[Niza.length-1];
+   document.getElementById("blog_sliki").innerHTML+="<li>"+"<div class='blog_div' id='novo'>"+"<img src="+source+" class='sl2'>"+"</div>"+"</li>";
+}
+function postiraj_recept(){
+    var x=document.getElementById("recept").value;
+    document.getElementById("novo").innerHTML+="<div class='recipe'>"+"<p style='background-color: white'>"+x+"</p>"+"</div>";
+}
+function pokazi_impresii(){
+    var el=document.getElementById("impresii");
+    el.style.display="block";
+    var new_com=document.createElement("div");
+    el.appendChild(new_com);
+    new_com.className="prebaraj";
+    new_com.style.fontFamily="'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif";
+    new_com.style.padding="0 20px";
+    new_com.style.backgroundColor="white";
+    new_com.style.color="black";
+    new_com.style.borderRadius="15px";
+    var ime=document.getElementById("ime").value;
+    var email=document.getElementById("email").value;
+    var tekst=document.getElementById("tekst").value;
+    var ocenka=document.getElementById("ocenka").value;
+    new_com.innerHTML+="<p><b>Name:"+ime+"</b></p>"+"<p>Email:"+email+"</p>"+"<p>"+tekst+"</p>"+"<p> Rating:"+ocenka+"</p>";
+
+}
+function hide_blog(){
+    document.getElementById("impresii").style.display="none";
+}

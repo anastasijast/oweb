@@ -1,6 +1,26 @@
 .menu{
     text-align:right ;
 }
+.start h1{
+  color: rgb(0, 0, 0);
+  font-size: 80px;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 7px;
+  cursor: pointer;
+  float: right;
+  margin-right: 20%;
+  margin-top: 13%;
+}
+.start h1{
+  transition: .5s linear
+}
+.start h1:hover{
+color: #fff;
+ text-shadow: 0 0 10px #fff,
+              0 0 20px #fff, 
+              0 0 40px #fff;
+}
 header{
     height: fit-content;
     width: 100%;
@@ -11,7 +31,7 @@ header{
     background-color: thistle;
 }
 body{
-    background-image: url("images/bg.jpg");
+    background-image: url("images/wall.jpg");
     background-repeat: no-repeat;
     background-attachment:fixed;
     background-size: cover;
@@ -28,7 +48,7 @@ body{
 .pocetok li{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 20px;
-    background-color: grey;
+    background-color: black;
     font-size: large;
     color: white;
     margin-right: 3%;
@@ -42,6 +62,7 @@ body{
     border-radius: 100%;
     margin-top: 7%;
     width: 15%;
+    margin-left: 20%;
 }
 .info{
     font-size: large;
@@ -175,7 +196,6 @@ fieldset{
     border-radius: 10px;
     background-color: rgba(216, 191, 216, 0.726);
     margin: 1% 10%;
-    text-align: center;
 
 }
 fieldset legend{
@@ -301,4 +321,8 @@ figcaption .kopce{
     margin-right: 5px;
     margin-bottom: 5px;
     font-size: 7px;
+}
+#recept{
+    margin-top: 15px;
+    border-radius: 15px;
 }
