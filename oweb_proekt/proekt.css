@@ -3,14 +3,13 @@
 }
 .start h1{
   color: rgb(0, 0, 0);
-  font-size: 80px;
+  font-size: 33px;
   font-weight: bold;
-  font-family: monospace;
-  letter-spacing: 7px;
+  letter-spacing: 2px;
   cursor: pointer;
   float: right;
   margin-right: 20%;
-  margin-top: 13%;
+  margin-top: 15%;
 }
 .start h1{
   transition: .5s linear
@@ -192,18 +191,21 @@ a{
     margin-bottom: 30px;
 }
 fieldset{
-    border: 2px solid rgba(216, 191, 216, 0.726);
+    background-color: rgba(0, 0, 0, 0.842);
+    border: 2px solid rgba(0, 0, 0, 0.842);
+ /* border: 2px solid rgba(216, 191, 216, 0.726); */
     border-radius: 10px;
-    background-color: rgba(216, 191, 216, 0.726);
+    /* background-color: rgba(216, 191, 216, 0.726); */
     margin: 1% 10%;
 
 }
 fieldset legend{
-    background-color: white;
+    background-color: thistle;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
-    margin: 20px;
+    margin: 20px 0;
+    padding: 10px 0;
     color: rgb(34, 33, 33);
+    font-size: 20px;
 }
 .button{
     margin: 20px 0;
@@ -213,8 +215,8 @@ fieldset legend{
     background-color: thistle;
 }
 fieldset label b{
-    color: rgb(34, 33, 33);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 footer{
     background-color: black;
@@ -325,4 +327,12 @@ figcaption .kopce{
 #recept{
     margin-top: 15px;
     border-radius: 15px;
+}
+.new_com{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px 20px;
+    background-color: thistle;
+    color: black;
+    border-radius: 15px;
+    margin: 20px;
 }
